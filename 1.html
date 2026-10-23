@@ -1,0 +1,55 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Online Symposium Portal</title>  
+</head>  
+<body>  
+  
+<header>  
+    <h1>Online Symposium Portal</h1>  
+</header>  
+  
+<main>  
+    <section>  
+        <h2>Student Registration</h2>  
+  
+        <form onsubmit="showMessage(event)">  
+  
+            <label for="name">Name:</label>  
+            <input type="text" id="name" name="name" required>  
+  
+            <br><br>  
+  
+            <label for="email">Email:</label>  
+            <input type="email" id="email" name="email" required>  
+  
+            <br><br>  
+  
+            <button type="submit">Submit</button>  
+  
+        </form>  
+  
+        <p id="message"></p>  
+    </section>  
+</main>  
+  
+<footer>  
+    <p>&copy; 2026 College Symposium</p>  
+</footer>  
+  
+<script>  function showMessage(event) {     
+event.preventDefault();  
+  
+    let name = document.getElementById("name").value;     let email = document.getElementById("email").value;  
+  
+    document.getElementById("message").innerHTML =  
+        "Registration Successful!<br>" +  
+        "Name: " + name + "<br>" +  
+        "Email: " + email;  
+}  
+</script>  
+  
+</body>  
+</html>  
